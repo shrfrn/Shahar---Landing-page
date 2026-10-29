@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מתוך הסבך | מאסטר קלאס בוטני בצבעי מים - שחר כ״ץ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #FFFFFF;
+      --bg-card: #FDFBF7;
+      --bg-accent: #F4EFEB;
+      --green-dark: #374433;
+      --green-leaf: #4F5F4A;
+      --green-soft: #7C8B76;
+      --text-main: #2C2C2C;
+      --text-muted: #5F615D;
+      --border-color: #E8E2D8;
+      --whatsapp: #25D366;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Assistant', sans-serif;
+      background-color: #FFFFFF;
+      color: var(--text-main);
+      line-height: 1.8;
+      padding: 0 16px 60px;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 30px 10px 24px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 36px;
+    }
+
+    .brand-logo {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 12px;
+    }
+
+    .brand-title {
+      font-family: 'Assistant', sans-serif;
+      font-size: 14px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--green-soft);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .brand-subtitle {
+      font-family: 'Assistant', sans-serif;
+      font-size: 14px;
+      color: #8C8880;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .tag-badge {
+      display: inline-block;
+      background-color: #ECE5DC;
+      color: var(--green-dark);
+      font-family: 'Assistant', sans-serif;
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 6px 18px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      letter-spacing: 0.04em;
+    }
+
+    /* Hero Image Container with Overlay */
+    .hero-img-wrap {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 35px;
+      background-color: transparent;
+    }
+
+    .hero-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 24px;
+      pointer-events: none;
+    }
+
+    .hero-overlay h1 {
+      font-family: 'Assistant', sans-serif;
+      font-size: 72px;
+      color: #FFFFFF;
+      line-height: 1.08;
+      margin-bottom: 16px;
+      font-weight: 700;
+      text-shadow: 0 2px 14px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.7);
+      letter-spacing: -0.01em;
+    }
+
+    .hero-overlay .hero-subtitle {
+      font-family: 'Assistant', sans-serif;
+      font-size: 26px;
+      color: #FFFFFF;
+      max-width: 720px;
+      margin: 0;
+      font-weight: 600;
+      line-height: 1.35;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.7);
+    }
+
+    /* Scroll Down Floating Button */
+    .scroll-down-btn {
+      margin-top: 24px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green-dark);
+      cursor: pointer;
+      text-decoration: none;
+      pointer-events: auto;
+      transition: all 0.25s ease;
+      animation: floatArrow 2.2s infinite ease-in-out;
+    }
+
+    .scroll-down-btn:hover {
+      background-color: #FFFFFF;
+      transform: translateY(3px) scale(1.05);
+      color: var(--green-leaf);
+    }
+
+    .scroll-down-btn svg {
+      width: 22px;
+      height: 22px;
+      stroke-width: 2.2;
+    }
+
+    @keyframes floatArrow {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(6px);
+      }
+    }
+
+    /* Three Sentence Box */
+    .summary-box {
+      scroll-margin-top: 30px;
+      background-color: var(--bg-card);
+      border-right: 4px solid var(--green-leaf);
+      border-radius: 10px;
+      padding: 28px 32px;
+      text-align: right;
+      margin-bottom: 35px;
+      border: 1px solid #F0ECE4;
+    }
+
+    .summary-box p {
+      font-family: 'Assistant', sans-serif;
+      font-size: 17.5px;
+      color: #383F35;
+      margin-bottom: 14px;
+    }
+
+    .summary-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* CTA buttons */
+    .btn-row {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .btn-primary {
+      background-color: var(--green-leaf);
+      color: #FFFFFF !important;
+      text-decoration: none;
+      padding: 14px 34px;
+      border-radius: 30px;
+      font-family: 'Assistant', sans-serif;
+      font-weight: 600;
+      font-size: 16.5px;
+      display: inline-block;
+      transition: all 0.25s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--green-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background-color: #FFFFFF;
+      color: var(--green-leaf) !important;
+      border: 1.5px solid var(--green-leaf);
+      text-decoration: none;
+      padding: 13px 28px;
+      border-radius: 30px;
+      font-family: 'Assistant', sans-serif;
+      font-weight: 600;
+      font-size: 16.5px;
+      display: inline-block;
+      transition: all 0.25s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: #F8F5F1;
+      transform: translateY(-2px);
+    }
+
+    .intimate-note {
+      font-family: 'Assistant', sans-serif;
+      font-size: 14px;
+      color: #8C8880;
+      text-align: center;
+    }
+
+    /* Section Cards */
+    .content-card {
+      background-color: var(--bg-card);
+      border-radius: 16px;
+      padding: 42px 36px;
+      margin-bottom: 32px;
+      border: 1px solid #F0ECE4;
+    }
+
+    .section-title {
+      font-family: 'Assistant', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 18px;
+      border-bottom: 1px solid #ECE6DC;
+      padding-bottom: 12px;
+    }
+
+    .content-list {
+      padding-right: 22px;
+      color: #484E44;
+      font-family: 'Assistant', sans-serif;
+      font-size: 16.5px;
+    }
+
+    .content-list li {
+      margin-bottom: 12px;
+    }
+
+    .content-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Studio Atmosphere Banner */
+    .studio-box {
+      background-color: var(--bg-accent);
+      border-radius: 16px;
+      padding: 40px 36px;
+      margin-bottom: 32px;
+      border: 1px solid #EBE4DA;
+    }
+
+    .studio-box p {
+      font-family: 'Assistant', sans-serif;
+      font-size: 17px;
+      color: #3C4238;
+      margin-bottom: 16px;
+    }
+
+    .studio-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Images Strip Between Sections */
+    .images-grid-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 32px;
+    }
+
+    .image-card {
+      border-radius: 14px;
+      overflow: hidden;
+      background-color: var(--bg-card);
+      border: 1px solid #F0ECE4;
+      aspect-ratio: 4/3;
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+
+    .image-card:hover img {
+      transform: scale(1.02);
+    }
+
+    /* Details Grid */
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .detail-item {
+      background-color: #FFFFFF;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #EFEAE2;
+    }
+
+    .detail-label {
+      font-family: 'Assistant', sans-serif;
+      font-size: 13px;
+      color: #7B7973;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .detail-val {
+      font-family: 'Assistant', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--green-dark);
+    }
+
+    .detail-sub {
+      font-family: 'Assistant', sans-serif;
+      font-size: 13px;
+      color: #8C8880;
+      margin-top: 4px;
+    }
+
+    /* Price Box */
+    .price-box {
+      background-color: #F8F5F0;
+      border-radius: 12px;
+      padding: 22px 26px;
+      margin-bottom: 28px;
+      border: 1px solid #EFE9DE;
+    }
+
+    .price-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .price-num {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--green-dark);
+      font-family: 'Assistant', sans-serif;
+    }
+
+    .price-pill {
+      background-color: #E2DDD3;
+      color: var(--green-dark);
+      font-family: 'Assistant', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    .price-foot {
+      font-family: 'Assistant', sans-serif;
+      font-size: 13.5px;
+      color: #7E7A71;
+      margin-top: 14px;
+      border-top: 1px dashed #DDD7CD;
+      padding-top: 10px;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      text-align: center;
+      background-color: var(--bg-card);
+      border-radius: 16px;
+      padding: 45px 30px;
+      border: 1px solid #F0ECE4;
+    }
+
+    .author-img {
+      width: 105px;
+      height: 105px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 16px;
+      display: block;
+      border: 3px solid #EDE7DE;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 26px 0 24px;
+    }
+
+    .contact-btn {
+      text-decoration: none;
+      padding: 11px 22px;
+      border-radius: 25px;
+      font-family: 'Assistant', sans-serif;
+      font-size: 15.5px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid #DDD7CD;
+      color: #374433;
+      background-color: #FAF8F5;
+      transition: all 0.2s ease;
+    }
+
+    .contact-btn:hover {
+      background-color: #EFEBE4;
+      transform: translateY(-2px);
+    }
+
+    .contact-btn.btn-wa {
+      background-color: var(--whatsapp);
+      color: #FFFFFF;
+      border-color: var(--whatsapp);
+    }
+
+    .contact-btn.btn-wa:hover {
+      background-color: #1EBE5D;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 35px 10px 10px;
+      font-family: 'Assistant', sans-serif;
+      font-size: 13.5px;
+      color: #9A958D;
+    }
+
+    footer a {
+      color: var(--green-leaf);
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .hero-overlay h1 { font-size: 42px; }
+      .hero-overlay .hero-subtitle { font-size: 19px; }
+      .content-card, .studio-box, .contact-section { padding: 26px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- כותרת ראשית ומותג -->
+  <header>
+    <img src="https://www.dropbox.com/scl/fi/c9al4vldav2cz641up0o9/Brown-and-Black-Minimalist-Floral-Round-Logo-5.jpeg?rlkey=6hn9sn2wjd6ytwwm2od1xmwuz&dl=1" alt="לוגו רשמים" class="brand-logo" onerror="this.style.display='none';">
+    <div class="brand-title">רְשָׁמִים | RESHAMIM BY SHAHAR</div>
+    <div class="brand-subtitle">סטודיו-גלריה לאמנות והתבוננות בוטנית | כפר סירקין</div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <span class="tag-badge">מאסטר קלאס בוטני בצבעי מים</span>
+
+    <!-- תמונת Hero מובילה עם טקסט עליה -->
+    <div class="hero-img-wrap">
+      <img src="https://www.dropbox.com/scl/fi/dwg1u4n7xb4qonra93psu/.jpg?rlkey=axmd9rsfrxx1acz01l0pp1o3v&dl=1" alt="שחר כ״ץ מתוך הסבך" onerror="this.src='https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80';">
+      <div class="hero-overlay">
+        <h1>מתוך הסבך</h1>
+        <p class="hero-subtitle">איך הופכים את הכאוס של הטבע לקומפוזיציה נושמת על הדף?</p>
+        <a href="#summary-section" class="scroll-down-btn" aria-label="גלילה לתיאור הקורס">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- תיאור בשלושה משפטים -->
+    <div class="summary-box" id="summary-section">
+      <p>כשיוצאים אל הטבע החי, הרגע הראשון עשוי להציף בריבוי פרטים, תנועה וסבך עשיר של צמיחה.</p>
+      <p>בקורס <strong>‘מתוך הסבך’</strong> נצא מעבר לגבולות הציור של האובייקט הבודד אל עבר ציור מורכב, עמוק ומלא שכבות.</p>
+      <p>לאורך שמונה מפגשים נשלב בין עבודת שטח בטבע החי לבין עבודה מיושבת בסטודיו, נלמד לפרק את הכאוס הבוטני, לחלץ את מוקד העניין, ונעמיק בצבע ובזרימת המים ככלים המארגנים מרחב ומולידים שפה ציורית אישית.</p>
+    </div>
+
+    <!-- כפתורי פעולה -->
+    <div class="btn-row">
+      <a href="https://pay.grow.link/MjIyMTk~a892643d2d467a75a4fe712ab63ce0fb-NDE2MDExMA" class="btn-primary" target="_blank">להרשמה לקורס</a>
+      <a href="https://wa.me/972544221802?text=%D7%94%D7%99%D7%99%20%D7%A9%D7%97%D7%A8%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%9E%D7%90%D7%A1%D7%98%D7%A8%20%D7%A7%D7%9C%D7%90%D7%A1%20%D7%9E%D7%AA%D7%95%D7%9A%20%D7%94%D7%A1%D7%91%D7%9A" class="btn-secondary" target="_blank">שיחה בוואטסאפ</a>
+    </div>
+    <div class="intimate-note">קבוצה קטנה ואינטימית (6–8 משתתפים בלבד)</div>
+  </section>
+
+  <!-- למי מיועד, מה נעשה, מה ייתן -->
+  <section class="content-card">
+    <div style="margin-bottom: 34px;">
+      <h2 class="section-title">למי הקורס מיועד?</h2>
+      <ul class="content-list">
+        <li><strong>ציירים ובעלי ניסיון מעשי</strong> ברישום או בצבעי מים המבקשים לבצע קפיצת מדרגה אמנותית.</li>
+        <li>יוצרים המבקשים <strong>להשתחרר מציור של עלה או פרח בודד</strong> ולהתמודד עם קומפוזיציות שלמות, עשירות ונושמות מתוך הטבע הפראי.</li>
+        <li>מי שמחפשים תהליך עבודה עמוק המאזן בין <strong>תכנון והבנה מבנית</strong> לבין <strong>חופש כתמי, שחרור שליטה וזרימת מים</strong>.</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 34px;">
+      <h2 class="section-title">מה נעשה ונלמד בקורס?</h2>
+      <ul class="content-list">
+        <li><strong>חילוץ מוקד העניין (Focal Point):</strong> זיהוי העוגן הקומפוזיציוני וההיררכיה מתוך ריבוי הפרטים והכאוס הצמחי.</li>
+        <li><strong>הצבע ככלי מארגן:</strong> שימוש ביחסי חום וקור, משפחות גוונים, טונאליות (כהה מול בהיר) ושכבות זיגוג (Glazing) לבניית עומק.</li>
+        <li><strong>עבודת חוץ משולבת סטודיו (Plein Air):</strong> לכידת מקצב וסקיצות מהירות מול הטבע החי, ותרגומם ליצירות מגובשות בסטודיו.</li>
+        <li><strong>עבודה תהליכית ו'סטארטרים':</strong> כל מפגש מהווה שער לתרגול אישי בבית, עם התבוננות משותפת ומשוב אישי בכל שיעור.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="section-title">מה הקורס ייתן לך?</h2>
+      <ul class="content-list">
+        <li><strong>ביטחון מול מורכבות:</strong> היכולת להתבונן בכל נוף סבוך ולדעת מאיפה להתחיל וכיצד לתרגם אותו אל הדף.</li>
+        <li><strong>שליטה רגישה במים ובשכבות:</strong> הבנה אינטואיטיבית של הנחות צבע רטוב-על-רטוב, יחסי שקיפות ודיוק בפרטים.</li>
+        <li><strong>שפה ציורית אישית:</strong> חיבור אמיתי בין הדיוק הבוטני לבין כתמיות חופשית ואותנטית.</li>
+        <li><strong>מרחב השראה שקט:</strong> שמונה חודשים של התפתחות, הקשבה ורצף יצירתי בקהילת יוצרים אינטימית.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- צמד תמונות השראה ועבודה -->
+  <div class="images-grid-pair">
+    <div class="image-card">
+      <img src="https://www.dropbox.com/scl/fi/4bhbbmywz3zanz1ci36k0/IMG_0908.jpeg?rlkey=v5qmsvo21zedlb1f1m19vnke9&dl=1" alt="עבודה מהסטודיו והשראה בוטנית" onerror="this.src='https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80';">
+    </div>
+    <div class="image-card">
+      <img src="https://www.dropbox.com/scl/fi/e3l0g7ewj4y2rqlq3l6u4/IMG_0996.jpeg?rlkey=kq76heinfxljl9urt5df1xkcs&dl=1" alt="יצירה והתבוננות בטבע" onerror="this.src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80';">
+    </div>
+  </div>
+
+  <!-- סביבת הסטודיו והחצר בכפר סירקין -->
+  <section class="studio-box">
+    <h2 class="section-title" style="border-bottom-color: #DDD4C8;">המרחב: סטודיו-גלריה "רשמים" והחצר הפורחת</h2>
+    <p>טבול בגינה ירוקה ושופעת בכפר סירקין, שוכן סטודיו-גלריה "רשמים" – מרחב פתוח של התבוננות, יצירה והשראה. זהו חלל יפהפה ופועם המשתנה ללא הרף יחד עם מקצב עונות השנה וזמני הפריחה שבחוץ.</p>
+    <p>החצר והטבע הסמוך הם חלק בלתי נפרד ממרחב הלמידה: אנחנו יוצאים החוצה להתבונן בהשתנות האור, ללקט ענפים, להרגיש את הרוח ולצייר מול הטבע החי. זהו מקום שבאים אליו כדי לעצור לרגע, לקחת נשימה, להניח למרוץ היום-יום וליצור מתוך חופש ושקט פנימי.</p>
+  </section>
+
+  <!-- מידע ופרטים טכניים -->
+  <section class="content-card">
+    <h2 class="section-title">פרטים והרשמה</h2>
+
+    <div class="details-grid">
+      <div class="detail-item">
+        <span class="detail-label">מועד פתיחה</span>
+        <div class="detail-val">5 בנובמבר</div>
+        <div class="detail-sub">(מותנה במספר הנרשמים)</div>
+      </div>
+
+      <div class="detail-item">
+        <span class="detail-label">ימים ושעות</span>
+        <div class="detail-val">ימי חמישי | 10:30–13:30</div>
+        <div class="detail-sub">יום חמישי הראשון בכל חודש</div>
+      </div>
+
+      <div class="detail-item">
+        <span class="detail-label">היקף הקורס</span>
+        <div class="detail-val">8 מפגשים שנתיים</div>
+        <div class="detail-sub">3 שעות מלאות בכל מפגש</div>
+      </div>
+    </div>
+
+    <div class="price-box">
+      <div class="price-header">
+        <div>
+          <span style="font-size: 13.5px; color: #6E6C65; display: block;">עלות הקורס המלא</span>
+          <div class="price-num">2,800 ₪</div>
+        </div>
+        <div>
+          <span class="price-pill">קבוצה קטנה: 6–8 משתתפים</span>
+        </div>
+      </div>
+      <div class="price-foot">
+        * המחיר אינו כולל חומרים. רשימת ציוד מפורטת תימסר לנרשמים לקראת פתיחת הקורס.
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <a href="https://pay.grow.link/MjIyMTk~a892643d2d467a75a4fe712ab63ce0fb-NDE2MDExMA" class="btn-primary" target="_blank" style="padding: 15px 40px; font-size: 17px;">להרשמה והבטחת מקום</a>
+    </div>
+  </section>
+
+  <!-- קצת עלי -->
+  <section class="content-card">
+    <h2 class="section-title">קצת עלי</h2>
+    <p style="font-family: 'Assistant', sans-serif; font-size: 17px; color: #383F35; line-height: 1.8; margin-bottom: 16px;">
+      שמי שחר כ״ץ, אמנית רב-תחומית, ציירת, קרמיקאית ומורה לאמנות. הסטודיו שלי, "רשמים", ממוקם בכפר סירקין – מרחב של אור, יופי והשתנות מתמדת.
+    </p>
+    <p style="font-family: 'Assistant', sans-serif; font-size: 17px; color: #383F35; line-height: 1.8; margin-bottom: 16px;">
+      היצירה שלי שואבת את כוחה מתוך התבוננות מעמיקה בטבע המקומי: בין אם בעשב השדה הצנוע ובין אם בסבך צמחייה מורכב.
+    </p>
+    <p style="font-family: 'Assistant', sans-serif; font-size: 17px; color: #383F35; line-height: 1.8; margin-bottom: 0;">
+      אני מתמחה בציור בוטני בצבעי מים ובפיסול בפורצלן. עבורי, טכניקה היא לא המטרה, אלא כלי שדרכו אפשר להעביר את מה שהלב והעיניים רואים. בעבודתי כמנחה, אני מבקשת קודם כל לפתוח את הנפש: לשחרר את הפחד מכישלון, לנקות את "רעשי האגו", ולהתמסר מחדש לשמחה הפשוטה של הגילוי והיצירה מתוך חופש.
+    </p>
+  </section>
+
+  <!-- יצירת קשר והזמנה אישית -->
+  <section class="contact-section">
+    <img src="https://www.dropbox.com/scl/fi/d12ung5zl5r4v9uvtpqng/IMG_8557.jpeg?rlkey=u6gfft4umjtjc5wddrwiiqta4&dl=1" alt="שחר כ״ץ" class="author-img" onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80';">
+    <h2 style="font-family: 'Assistant', sans-serif; font-size: 26px; font-weight: 700; color: var(--green-dark); margin-bottom: 8px;">אני מזמינה אותך בחום לדבר איתי</h2>
+    <p style="font-size: 16.5px; color: #4A5046; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+      כדי לוודא שהקורס אכן מתאים בדיוק לרקע, לשאיפות ולמסע היצירתי שלך, אני תמיד שמחה לשוחח באופן אישי לפני ההרשמה. אשמח לענות על כל שאלה, להקשיב ולהרגיש יחד אם זהו המקום הנכון עבורך.
+    </p>
+
+    <div class="contact-links">
+      <a href="tel:0544221802" class="contact-btn">054-4221802</a>
+      <a href="https://wa.me/972544221802?text=%D7%94%D7%99%D7%99%20%D7%A9%D7%97%D7%A8%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%AA%D7%99%D7%99%D7%A2%D7%A5%20%D7%90%D7%99%D7%AA%D7%9A%20%D7%9C%D7%92%D7%91%D7%99%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%9E%D7%AA%D7%95%D7%9A%20%D7%94%D7%A1%D7%91%D7%9A" class="contact-btn btn-wa" target="_blank">שיחה אישית בוואטסאפ</a>
+      <a href="mailto:info@reshamim.online" class="contact-btn">info@reshamim.online</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p style="margin-bottom: 4px;">רְשָׁמִים | RESHAMIM BY SHAHAR • סטודיו-גלריה בכפר סירקין</p>
+    <p><a href="https://www.reshamim.online" target="_blank">www.reshamim.online</a></p>
+  </footer>
+
+</div>
+
+</body>
+</html>
